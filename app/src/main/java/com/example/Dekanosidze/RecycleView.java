@@ -9,29 +9,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.Dekanosidze.room.BloodBank;
-import com.example.Dekanosidze.R;
+import com.example.Dekanosidze.RoomDB.BloodBank;
 
 import java.util.ArrayList;
 
-public class RecyAdapter extends RecyclerView.Adapter<RecyAdapter.ViewHolder> {
+public class RecycleView extends RecyclerView.Adapter<RecycleView.ViewHolder> {
 
     private ArrayList<BloodBank> list;
 
-    public RecyAdapter(ArrayList<BloodBank> list) {
+    public RecycleView(ArrayList<BloodBank> list) {
         this.list = list;
     }
 
     @NonNull
     @Override
-    public RecyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecycleView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_row, parent, false);
         return new ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecycleView.ViewHolder holder, int position) {
 //        Collections.sort(list.get(position).getWeight());
         BloodBank item = list.get(position);
         holder.bindTo(item);

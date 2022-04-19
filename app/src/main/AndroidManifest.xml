@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
         <activity
-            android:name="com.example.Dekanosidze.SortingActivity"
+            android:name="com.example.Dekanosidze.Sort"
             android:exported="false" />
         <activity
             android:name="com.example.Dekanosidze.PagingActivity"

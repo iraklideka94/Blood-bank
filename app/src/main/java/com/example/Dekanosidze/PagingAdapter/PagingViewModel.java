@@ -1,4 +1,4 @@
-package com.example.Dekanosidze.paging;
+package com.example.Dekanosidze.PagingAdapter;
 
 
 import androidx.lifecycle.LiveData;
@@ -7,14 +7,14 @@ import androidx.paging.DataSource;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
 
-import com.example.Dekanosidze.room.BloodBank;
+import com.example.Dekanosidze.RoomDB.BloodBank;
 
-public class BloodPagingViewModel extends ViewModel {
+public class PagingViewModel extends ViewModel {
     private final DataRepository mRepository;
     public static int PAGE_SIZE = 30;
     public static boolean PLACEHOLDERS = true;
 
-    public BloodPagingViewModel(DataRepository repository) {
+    public PagingViewModel(DataRepository repository) {
         mRepository = repository;
     }
 

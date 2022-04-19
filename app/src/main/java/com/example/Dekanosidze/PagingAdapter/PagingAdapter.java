@@ -1,4 +1,4 @@
-package com.example.Dekanosidze.paging;
+package com.example.Dekanosidze.PagingAdapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,9 +13,9 @@ import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.Dekanosidze.BloodForJason;
+import com.example.Dekanosidze.Jason;
 import com.example.Dekanosidze.R;
-import com.example.Dekanosidze.room.BloodBank;
+import com.example.Dekanosidze.RoomDB.BloodBank;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -23,11 +23,11 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 
-public class BloodPagingAdapter extends PagedListAdapter<BloodBank, BloodPagingAdapter.BloodViewHolder> {
+public class PagingAdapter extends PagedListAdapter<BloodBank, PagingAdapter.BloodViewHolder> {
 
     Context context;
 
-    public BloodPagingAdapter(Context context) {
+    public PagingAdapter(Context context) {
         super(DIFF_CALLBACK);
         this.context = context;
     }
@@ -53,7 +53,7 @@ if(position<2) {
         Gson gson = new Gson();
         Type listUserType = new TypeToken<List<BloodBank>>() {
         }.getType();
-        BloodForJason users = gson.fromJson(jsonFileString, BloodForJason.class);
+        Jason users = gson.fromJson(jsonFileString, Jason.class);
         holder.name.setText(users.getBloodBanks().get(position).getName());
         holder.bloodgroup.setText(users.getBloodBanks().get(position).getBloodGroup());
         holder.location.setText(users.getBloodBanks().get(position).getLocation());

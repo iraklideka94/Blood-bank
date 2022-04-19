@@ -8,9 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.Dekanosidze.room.AppDatabase;
-import com.example.Dekanosidze.room.BloodBank;
-import com.example.Dekanosidze.R;
+import com.example.Dekanosidze.RoomDB.AppDatabase;
+import com.example.Dekanosidze.RoomDB.BloodBank;
 
 public class MainActivity extends AppCompatActivity {
     EditText etName, etBloodGroup, etPhone, etLocation, etDate, etWeight;

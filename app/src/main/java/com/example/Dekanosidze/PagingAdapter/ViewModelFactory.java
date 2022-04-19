@@ -1,4 +1,4 @@
-package com.example.Dekanosidze.paging;
+package com.example.Dekanosidze.PagingAdapter;
 
 import android.app.Activity;
 import android.app.Application;
@@ -9,18 +9,18 @@ import androidx.lifecycle.ViewModelProvider;
 
 import java.lang.reflect.InvocationTargetException;
 
-public class BloodViewModelFactory implements ViewModelProvider.Factory{
+public class ViewModelFactory implements ViewModelProvider.Factory{
     private final DataRepository mRepository;
 
-    public static BloodViewModelFactory createFactory(Activity activity) {
+    public static ViewModelFactory createFactory(Activity activity) {
         Application application = activity.getApplication();
         if (application == null) {
             throw new IllegalStateException("Not yet attached to Application");
         }
-        return new BloodViewModelFactory(DataRepository.getInstance(application));
+        return new ViewModelFactory(DataRepository.getInstance(application));
     }
 
-    private BloodViewModelFactory(DataRepository repository) {
+    private ViewModelFactory(DataRepository repository) {
         mRepository = repository;
     }
 

@@ -1,4 +1,4 @@
-package com.example.Dekanosidze.paging;
+package com.example.Dekanosidze.PagingAdapter;
 
 import android.content.Context;
 

@@ -1,13 +1,13 @@
-package com.example.Dekanosidze.paging;
+package com.example.Dekanosidze.PagingAdapter;
 
 import android.content.Context;
 
 import androidx.lifecycle.LiveData;
 import androidx.paging.DataSource;
 
-import com.example.Dekanosidze.room.AppDatabase;
-import com.example.Dekanosidze.room.BloodBank;
-import com.example.Dekanosidze.room.UserDao;
+import com.example.Dekanosidze.RoomDB.AppDatabase;
+import com.example.Dekanosidze.RoomDB.BloodBank;
+import com.example.Dekanosidze.RoomDB.UserDao;
 
 import java.util.List;
 import java.util.concurrent.Callable;

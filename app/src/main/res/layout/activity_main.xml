@@ -14,7 +14,7 @@
         android:layout_marginTop="100dp"
         android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Firstname"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 
@@ -79,5 +79,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        android:text="Add" />
+        android:text="SAVE" />
 </LinearLayout>

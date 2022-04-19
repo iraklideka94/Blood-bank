@@ -12,9 +12,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.Dekanosidze.room.AppDatabase;
-import com.example.Dekanosidze.room.BloodBank;
-import com.example.Dekanosidze.paging.Utils;
+import com.example.Dekanosidze.RoomDB.AppDatabase;
+import com.example.Dekanosidze.RoomDB.BloodBank;
+import com.example.Dekanosidze.PagingAdapter.Utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -24,11 +24,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class SortingActivity extends AppCompatActivity {
+public class Sort extends AppCompatActivity {
     AppDatabase db;
     RecyclerView rv;
     ArrayList<BloodBank> bloodies;
-    RecyAdapter adapter;
+    RecycleView adapter;
     BloodBank bl;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -44,7 +44,7 @@ public class SortingActivity extends AppCompatActivity {
         Gson gson = new Gson();
         Type listUserType = new TypeToken<List<BloodBank>>() {
         }.getType();
-        BloodForJason users = gson.fromJson(jsonFileString, BloodForJason.class);
+        Jason users = gson.fromJson(jsonFileString, Jason.class);
 
         bloodies = (ArrayList<BloodBank>) db.userDao().getAllBloodies();
         bloodies.addAll(users.getBloodBanks());
@@ -60,7 +60,7 @@ public class SortingActivity extends AppCompatActivity {
         }
 
 
-        adapter = new RecyAdapter(bloodies);
+        adapter = new RecycleView(bloodies);
         rv = findViewById(R.id.rvSort);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
@@ -71,7 +71,7 @@ public class SortingActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu2, menu);
+        getMenuInflater().inflate(R.menu.menu1, menu);
         return true;
     }
 
@@ -79,7 +79,7 @@ public class SortingActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.homepage) {
-            Intent intent = new Intent(SortingActivity.this, MainActivity.class);
+            Intent intent = new Intent(Sort.this, MainActivity.class);
             startActivity(intent);
         }return true;
     }

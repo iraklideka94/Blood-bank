@@ -1,13 +1,13 @@
 package com.example.Dekanosidze;
 
-import com.example.Dekanosidze.room.BloodBank;
+import com.example.Dekanosidze.RoomDB.BloodBank;
 
 import java.util.ArrayList;
 
-public class BloodForJason {
+public class Jason {
     private ArrayList<BloodBank> bloodBanks;
 
-    public BloodForJason(ArrayList<BloodBank> bloodBanks) {
+    public Jason(ArrayList<BloodBank> bloodBanks) {
         this.bloodBanks = bloodBanks;
     }
 
