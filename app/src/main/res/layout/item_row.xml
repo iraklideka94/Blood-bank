@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:cardCornerRadius="@dimen/cardview_default_radius">
+
+        <TextView
+            android:id="@+id/tvRVName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="40dp"
+            android:text="name" />
+
+        <TextView
+            android:id="@+id/tvRVBloodGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="70dp"
+            android:text="blood group" />
+
+        <TextView
+            android:id="@+id/tvRVPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="100dp"
+            android:text="phone" />
+
+        <TextView
+            android:id="@+id/tvRVLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="130dp"
+            android:text="location" />
+
+        <TextView
+            android:id="@+id/tvRVDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="160dp"
+            android:text="date" />
+
+        <TextView
+            android:id="@+id/tvRVWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="190dp"
+            android:text="weight" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

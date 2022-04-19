@@ -1,0 +1,20 @@
+{
+  "bloodBanks": [
+    {
+      "name": "Irakli",
+      "bloodGroup": "B+",
+      "phone": "577209693",
+      "location": "London",
+      "donation time":"2022",
+      "weight": 80
+    },
+    {
+      "name": "Lasha",
+      "bloodGroup": "AB",
+      "phone": "577980976",
+      "location": "Tbilisi",
+      "donation time": "2021",
+      "weight": 67
+    }
+  ]
+}
